@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  color: #ffffff;
+  font-family: "montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container{
+  padding: 0 60px;
+}
+
+section{
+  border-bottom: 1px solid #ffffff;
+}
+
+/* BUTTON STYLING */
+button{
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 3px;
+  border: none, 1px;
+  color: #ffffff;
+  background-image: linear-gradient(to right, #d434ef, #903aff);
+}
+
+
+/* NAV STYLING */
+.navbar{
+  display: flex;
+  align-items: center;;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.navbar .nav-logo{
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .logo-span{
+  color: #d434fe;
+}
+
+.navbar .nav-links{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: baseline;
+}
+
+.navbar .nav-links ul li{
+  display: inline-block;
+  margin: 0 15px;
+  color: #ffffff;
+  gap: 20px;
+}
+
+
+/* HEADER STYLING */
+.header{
+  background-image: radial-gradient(closest-side at 15% 33%, #903aff4d,  #150e28);
+}
+
+.hearder-img{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+
+/* THE BIG IDEA SECTION STYLING */
+.big-idea{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+}
+
+/* RULES AND GUIDELINES SECTION STYLING */
+.rules{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+}
+
+/* REWARDS SECTION STYLING */
+.rewards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+}
+
+/* PRIVACY POLICY STYLING */
+.privacy{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+}
+
+/* FOOTER STYLING */
+.footer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 50px;
+}
+
+.footer ul li{
+  list-style: none;
+  margin-left: -40px;
+}

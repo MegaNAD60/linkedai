@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0px;
   color: #ffffff;
   font-family: "montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -7,11 +7,25 @@ body {
 }
 
 .container{
-  padding: 0 60px;
+  padding: 0 120px;
 }
 
-section{
-  border-bottom: 1px solid #ffffff;
+hr{
+  border: 0.5px solid #302f2f;
+}
+
+p{
+  line-height: 33px;
+  font-size: 1.1rem;
+}
+
+li{
+  line-height: 33px;
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /* BUTTON STYLING */
@@ -22,6 +36,45 @@ button{
   border: none, 1px;
   color: #ffffff;
   background-image: linear-gradient(to right, #d434ef, #903aff);
+}
+#nav-btn{
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 3px;
+  border: none, 1px;
+  color: #ffffff;
+  background-image: linear-gradient(to right, #d434ef, #903aff);
+}
+
+/* Form STYLING */
+input{
+  width: 90%;
+  padding: 15px;
+  border: 1px solid #ffffff;
+  background-color: #903aff1a;
+}
+
+textarea{
+  width: 90%;
+  height: 80px;
+  padding: 15px;
+  border: 1px solid #ffffff;
+  background-color: #903aff1a;
+}
+
+select{
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: rgba(144, 58, 255, 0.1);
+}
+
+.form-box{
+  padding: 30px;
+  background-color: #120d1f;
+  box-shadow: 11px 11px 22px #150e28,
+              -11px -11px 22px #150e28;
 }
 
 
@@ -57,13 +110,21 @@ button{
   gap: 20px;
 }
 
+.navbar .nav-btn{
+  margin-left: 100px;
+}
+
+.navbar .nav-icons{
+  display: none;
+}
+
 
 /* HEADER STYLING */
 .header{
   background-image: radial-gradient(closest-side at 15% 33%, #903aff4d,  #150e28);
 }
 
-.hearder-img{
+.hearder-details{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
@@ -83,6 +144,7 @@ button{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 50px;
+  background-image: radial-gradient(closest-side at 15% 33%, #903aff4d,  #150e28);
 }
 
 /* REWARDS SECTION STYLING */
@@ -96,6 +158,7 @@ button{
 .privacy{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
   padding: 50px;
 }
 
@@ -103,10 +166,85 @@ button{
 .footer{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
   padding: 50px;
 }
 
 .footer ul li{
   list-style: none;
   margin-left: -40px;
+}
+
+/* REGISTER STYLING */
+.register{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+}
+
+label{
+  margin-top: 20px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* CONTACT STYLING */
+.contact{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width:800px){
+
+  .container{
+    display: grid;
+  }
+
+  /* NAVBAR STYLES FOR MOBILE VIEW */
+  .navbar .nav-links{
+    display: none;
+  }
+
+  .navbar .links{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 30px;
+    z-index: 1;
+    background-color: #000000;
+}
+
+  .navbar .nav-icons{
+    display: inline;
+  }
+
+  .navbar .nav-btn{
+    margin: 0;
+  }
+
+  /* MOBILE VIEW STYLES FOR HEADER */
+  .hearder-details{
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  /* MOBILE VIEW STYLES FOR HEADER */
+  .big-idea{
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+
+  .rules{
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
 }

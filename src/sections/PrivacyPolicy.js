@@ -16,7 +16,6 @@ function PrivacyPolicy(){
 
     const licenseBox = {
         padding: '30px',
-        margin : '20px',
         border: '1px solid #d434fe',
         borderRadius: '5px'
     }

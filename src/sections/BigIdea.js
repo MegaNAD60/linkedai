@@ -1,8 +1,8 @@
 function BigIdea(){
 
     const bigIdea = {
-        height: '377px',
-        width: '390px'
+        height: '277px',
+        width: '290px'
     }
 
     return(

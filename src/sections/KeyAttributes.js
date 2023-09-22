@@ -2,6 +2,12 @@ import Button from '../components/Button';
 
 function KeyAttributes(){
 
+    const star = {
+        height: '3px',
+        width: '3px',
+        color: '#d434fe'
+    }
+
     const image = {
         height: '587px',
         width: '710px'
@@ -10,7 +16,10 @@ function KeyAttributes(){
     return(
         <>
             <div className='big-idea'>
-                <img src={require('../images/attributes.png')} alt='key-attributes' style={image} />
+                <div>
+                    <img src={require('../images/star_pu.png')} alt='star' style={{star}} /> <br/><br/>
+                    <img src={require('../images/attributes.png')} alt='key-attributes' style={image} />
+                </div>
                 <div>
                     <h2>Judging criteria<br/><span style={{color: '#d434fe'}}>Key attributes</span></h2>
                     <p><span style={{color: '#d434fe', fontWeight: 'bold'}}>Innovation and creativity:</span> Evaluate

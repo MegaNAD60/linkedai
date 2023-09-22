@@ -1,8 +1,8 @@
 function Partners(){
 
     const image = {
-        height: '560px',
-        width: '1255px',
+        height: '460px',
+        width: '1155px',
     }
 
     return(

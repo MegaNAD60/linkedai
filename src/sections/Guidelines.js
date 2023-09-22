@@ -1,8 +1,8 @@
 function Guidelines(){
 
     const image = {
-        height: '664px',
-        width: '664px',
+        height: '564px',
+        width: '564px',
     }
     return(
         <>

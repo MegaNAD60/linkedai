@@ -10,10 +10,6 @@ import Footer from "../sections/Footer";
 
 function Homepage(){
 
-    const resposive = {
-
-    }
-
     return(
         <>
         <div className='container'>

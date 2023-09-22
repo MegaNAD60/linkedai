@@ -27,7 +27,6 @@ function Header(){
         right: '100px'
     }
 
-    const resposive = {}
 
     return(
         <div className='header'>

@@ -5,17 +5,17 @@ function Header(){
 
     // MEDIA QUERIES
     const Desktop = ({children}) => {
-        const isDesktop = useMediaQuery({minWidth: 600, maxWidth: 7000})
+        const isDesktop = useMediaQuery({minWidth: 800, maxWidth: 7000})
         return isDesktop ? children : null
     }
     const Phone = ({children}) => {
-        const isPhone = useMediaQuery({minWidth: 300, maxWidth: 600})
+        const isPhone = useMediaQuery({minWidth: 300, maxWidth: 800})
         return isPhone ? children : null
     }
 
-   // CSS STYLING
    // DESKTOP CSS STYLE
    const header = {
+    marginTop: '50px',
     backgroundImage: 'radial-gradient(closest-side at 15% 33%, #903aff4d,  #150e28)',
    }
    const columnTemplate ={
@@ -46,7 +46,7 @@ function Header(){
         width: '467px',
         position: 'absolute',
         top: '50px',
-        right: '200px'
+        right: '100px'
     }
 
     // PHONE CSS STYLE
@@ -77,7 +77,7 @@ function Header(){
         width: '267px',
         position: 'absolute',
         top: '20px',
-        right: '40px'
+        right: '100px'
     }
 
 
@@ -85,7 +85,7 @@ function Header(){
         <>
         <Desktop>
             <div style={header}>
-                <h3 style={{position: 'absolute', right: '100px', top: '100px', color: '#ffffff'}}><i>Igniting a Revolution in<span style={{textDecoration: 'underline'}}> HR innovation</span></i></h3>
+                <h3 style={{position: 'absolute', right: '100px', top: '100px', color: '#ffffff'}}><i>Igniting a Revolution in<span> HR innovation</span></i></h3>
                 <div style={columnTemplate}>
                     <div>
                         <img src={require('../images/star.png')} alt='star' style={{star}} /> <br/>
@@ -105,7 +105,7 @@ function Header(){
 
         <Phone>
             <div className='header'>
-                    <h3 style={{position: 'absolute', right: '100px', top: '50px', color: '#ffffff'}}><i>Igniting a Revolution in HR innovation</i></h3>
+                    <h3 style={{position: 'absolute', right: '100px', top: '100px', color: '#ffffff'}}><i>Igniting a Revolution in HR innovation</i></h3>
                     <div style={phoneColumnTemplate}>
                         <div>
                             <img src={require('../images/star.png')} alt='star' style={{phoneStar}} /> <br/>

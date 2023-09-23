@@ -4,11 +4,11 @@ function Partners(){
 
     // MEDIA QUERIES
     const Desktop = ({children}) => {
-        const isDesktop = useMediaQuery({minWidth: 600, maxWidth: 7000})
+        const isDesktop = useMediaQuery({minWidth: 800, maxWidth: 7000})
         return isDesktop ? children : null
     }
     const Phone = ({children}) => {
-        const isPhone = useMediaQuery({minWidth: 300, maxWidth: 600})
+        const isPhone = useMediaQuery({minWidth: 300, maxWidth: 800})
         return isPhone ? children : null
     }
 

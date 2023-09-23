@@ -6,11 +6,11 @@ function PrivacyPolicy(){
 
     // MEDIA QUERIES
     const Desktop = ({children}) => {
-        const isDesktop = useMediaQuery({minWidth: 600, maxWidth: 7000})
+        const isDesktop = useMediaQuery({minWidth: 800, maxWidth: 7000})
         return isDesktop ? children : null
     }
     const Phone = ({children}) => {
-        const isPhone = useMediaQuery({minWidth: 300, maxWidth: 600})
+        const isPhone = useMediaQuery({minWidth: 300, maxWidth: 800})
         return isPhone ? children : null
     }
 
@@ -77,7 +77,7 @@ function PrivacyPolicy(){
                             <h3>Licensing Policy</h3>
                             <p>Here are some of our standard licence:</p>
                             <ul>
-                                <li><FaCheckCircle style={{color: 'green, white'}} /> The standard license grant you a non-exclusive right to navigate and register for our event</li>
+                                <li><FaCheckCircle style={{color: 'green'}} /> The standard license grant you a non-exclusive right to navigate and register for our event</li>
                                 <li><FaCheckCircle style={{color: 'green'}} /> You are licensed to use the item available at any free source sites, for your project development</li>
                             </ul>
                             <center>

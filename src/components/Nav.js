@@ -1,11 +1,16 @@
+import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom"
 
 function Nav(){
 
+    const navbar = {
+        padding: '20px 100px'
+    }
+
 
     return(
         <>
-            <nav className='navbar'>
+            <nav className='navbar' style={navbar}>
                 <div className='nav-logo'>get<span className='logo-span'>linked</span></div>
                 <div className='nav-links'>
                     <ul className="links">
@@ -17,8 +22,7 @@ function Nav(){
                     </ul>
                 </div>
                 <div class="nav-icons">
-                    <span class="modebtn"><i class="fa fa-moon">btn</i></span>
-                    <span class="hamburger"><i class="fa fa-bars"></i></span>
+                    <span class="hamburger"><FaBars /></span>
                 </div>
 
             </nav>

@@ -22,7 +22,7 @@ function Header(){
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
         justifyContent: 'space-between',
-        marginTop: '60px',
+        marginTop: '100px',
         padding: '0 120px'
    }
 
@@ -68,7 +68,7 @@ function Header(){
     }
 
     const phoneImage1= {
-        height: '241px',
+        height: '290px',
         width: '80%',
     }
 
@@ -80,12 +80,37 @@ function Header(){
         right: '100px'
     }
 
+    const innovation = {
+        position: 'relative',
+        float: 'right',
+        top: '-100px',
+        right: '300px'
+    }
+
+    const h3 = {
+        color: '#ffffff'
+    }
+
+    const line = {
+        position: 'aboslute',
+        right: '10px',
+        top: '-4px',
+        width: '250px',
+        height: '100px',
+        border: 'solid 5px #d434ef',
+        borderColor: '#d434ef transparent transparent transparent',
+        borderRadius: '80%/100px 100px 0 0',
+    }
+
 
     return(
         <>
         <Desktop>
             <div style={header}>
-                <h3 style={{position: 'absolute', right: '100px', top: '100px', color: '#ffffff'}}><i>Igniting a Revolution in<span> HR innovation</span></i></h3>
+                <div style={innovation}>
+                    <h3 style={h3}><i>Igniting a Revolution in<span className='hr'> HR innovation</span></i></h3>
+                    <div style={line}></div>
+                </div>
                 <div style={columnTemplate}>
                     <div>
                         <img src={require('../images/star.png')} alt='star' style={{star}} /> <br/>
@@ -105,7 +130,10 @@ function Header(){
 
         <Phone>
             <div className='header'>
-                    <h3 style={{position: 'absolute', right: '100px', top: '100px', color: '#ffffff'}}><i>Igniting a Revolution in HR innovation</i></h3>
+                <div style={{position: 'relative', }}>
+                    <h3 style={{position: 'absolute', right: '150px', top: '-80px', color: '#ffffff'}}><i>Igniting a Revolution in<span className='hr'> HR innovation</span></i></h3>
+                    <div className='box' style={{position: 'absolute', right: '120px', top: '-20px'}}></div>
+                </div>
                     <div style={phoneColumnTemplate}>
                         <div>
                             <img src={require('../images/star.png')} alt='star' style={{phoneStar}} /> <br/>

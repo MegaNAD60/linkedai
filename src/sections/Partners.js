@@ -30,7 +30,7 @@ function Partners(){
     }
 
     const phoneImage = {
-        height: '150px',
+        height: '250px',
         width: '100%',
     }
 

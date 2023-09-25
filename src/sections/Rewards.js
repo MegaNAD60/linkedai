@@ -39,12 +39,12 @@ function Rewards(){
     }
 
     const phoneImage1 = {
-        height: '300px',
+        height: '400px',
         width: '100%',
     }
 
     const phoneImage2 = {
-        height: '200px',
+        height: '300px',
         width: '100%',
     }
 

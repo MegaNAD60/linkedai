@@ -1,6 +1,7 @@
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom"
 import { useMediaQuery } from "react-responsive";
+import { useState } from "react";
 
 function Nav(){
 
@@ -24,6 +25,8 @@ function Nav(){
         padding: '20px 50px'
     }
 
+    const [showNav, setShowNav] = useState(false);
+
     const handleHambuger = () =>{
         console.log('navbar')
     }
@@ -36,9 +39,9 @@ function Nav(){
                     <div className='nav-logo'>get<span className='logo-span'>linked</span></div>
                     <div className='nav-links'>
                         <ul className="links">
-                            <li>Timeline</li>
-                            <li>Overview</li>
-                            <li>FAQs</li>
+                            <li><a href="index.js">Timeline</a></li>
+                            <li><a href="index.js">Overview</a></li>
+                            <li><a href="index.js">FAQs</a></li>
                             <li><Link to='contact'>Contact</Link></li>
                             <li style={{marginLeft: '100px'}}><a href="register" type="button" id="nav-btn">Register</a></li>
                         </ul>

@@ -7,6 +7,7 @@ import Rewards from "../sections/Rewards";
 import Partners from "../sections/Partners";
 import PrivacyPolicy from "../sections/PrivacyPolicy";
 import Footer from "../sections/Footer";
+import Timeline from "../sections/Timeline";
 
 function Homepage(){
 
@@ -32,6 +33,9 @@ function Homepage(){
                 <KeyAttributes />
             </section>
         </div><hr/>
+        <section>
+            <Timeline />
+        </section><hr />
         <div className='container'>
             <section>
                 <Faq />

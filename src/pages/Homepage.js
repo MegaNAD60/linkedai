@@ -13,54 +13,36 @@ function Homepage(){
 
     return(
         <>
-        <div className='container'>
             <section>
                 <Header />
-            </section>
-        </div><hr />
-        <div className='container'>
+            </section><hr />
             <section>
                 <BigIdea />
-            </section>
-        </div><hr/>
-        <div className='container'>
+            </section><hr />
             <section>
                 <Guidelines />
-            </section>
-        </div><hr/>
-        <div className='container'>
+            </section><hr />
             <section>
                 <KeyAttributes />
-            </section>
-        </div><hr/>
-        <section>
-            <Timeline />
-        </section><hr />
-        <div className='container'>
+            </section><hr />
             <section>
                 <Faq />
-            </section>
-        </div><hr />
-        <div className='container'>
+            </section><hr />
+            <section>
+                <Timeline />
+            </section><hr />
             <section>
                 <Rewards />
-            </section>
-        </div><hr/>
-        <div className='container'>
+            </section><hr />
             <section>
                 <Partners />
-            </section>
-        </div><hr />
-        <div className='container'>
+            </section><hr />
             <section>
                 <PrivacyPolicy />
-            </section>
-        </div><hr />
-        <div className='container'>
+            </section><hr />
             <section>
                 <Footer />
-            </section>
-        </div>
+            </section><hr />
         </>
     )
 }

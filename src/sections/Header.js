@@ -49,37 +49,6 @@ function Header(){
         right: '100px'
     }
 
-    // PHONE CSS STYLE
-    const phoneColumnTemplate = {
-        display: 'grid',
-        gridTemplateColumns: '100%',
-        marginTop: '60px',
-        padding: '0 50px'
-    }
-
-    const phoneStar = {
-        height: '3px',
-        width: '3px'
-    }
-
-    const phoneTitle = {
-        height: '100px',
-        width: '250px'
-    }
-
-    const phoneImage1= {
-        height: '290px',
-        width: '80%',
-    }
-
-    const phoneImage2 ={
-        height: '241px',
-        width: '267px',
-        position: 'absolute',
-        top: '20px',
-        right: '100px'
-    }
-
     const innovation = {
         position: 'relative',
         float: 'right',
@@ -88,20 +57,21 @@ function Header(){
     }
 
     const h3 = {
-        color: '#ffffff'
+        color: '#ffffff',
+        fontSize: '1.3rem',
+
     }
 
     const line = {
         position: 'aboslute',
-        right: '10px',
-        top: '-4px',
-        width: '250px',
+        marginTop: '-10px',
+        width: '200px',
         height: '100px',
+        marginLeft: '200px',
         border: 'solid 5px #d434ef',
         borderColor: '#d434ef transparent transparent transparent',
         borderRadius: '80%/100px 100px 0 0',
     }
-
 
     return(
         <>
@@ -117,7 +87,7 @@ function Header(){
                         <img src={require('../images/Title.png')} alt='title' style={title} />
                         <p style={{color: '#ffffff', fontSize: '1.2rem'}}>Participate in getlinked tech Hackathon 2023 stand a chance to win a big price</p>
                         <Button name='Register' />
-                        <h2>00<small>H</small> 00<small>M</small> 00<small>S</small></h2>
+                        <h2>00<small style={{fontSize: '0.8rem'}}>H</small> 00<small style={{fontSize: '0.8rem'}}>M</small> 00<small style={{fontSize: '0.8rem'}}>S</small></h2>
                     </div>
                     <div style={{position: 'relative'}}>
                         <img src={require('../images/man-wearing-smart-glasses-touching-virtual-screen.png')} alt='man' style={man} />
@@ -129,26 +99,82 @@ function Header(){
         </Desktop>
 
         <Phone>
-            <div className='header'>
-                <div style={{position: 'relative', }}>
-                    <h3 style={{position: 'absolute', right: '150px', top: '-80px', color: '#ffffff'}}><i>Igniting a Revolution in<span className='hr'> HR innovation</span></i></h3>
-                    <div className='box' style={{position: 'absolute', right: '120px', top: '-20px'}}></div>
+            <div className='header'
+              style={{
+                marginTop: '10px',
+                backgroundImage: 'radial-gradient(closest-side at 40% 20%, #903aff4d,  #150e28)',
+               }}>
+                <div style={{position: 'relative'}}>
+                    <h3 style={{
+                                position: 'absolute',
+                                right: '50px',
+                                top: '-40px',
+                                color: '#ffffff',
+                                fontSize: '1rem',
+                    }}>Igniting a Revolution in HR innovation</h3>
+
+                    <div style={{
+                                position: 'aboslute',
+                                marginTop: '30px',
+                                marginLeft: '120px',
+                                width: '150px',
+                                height: '60px',
+                                border: 'solid 5px #d434ef',
+                                borderColor: '#d434ef transparent transparent transparent',
+                                borderRadius: '80%/100px 100px 0 0',
+                    }}></div>
                 </div>
-                    <div style={phoneColumnTemplate}>
-                        <div>
-                            <img src={require('../images/star.png')} alt='star' style={{phoneStar}} /> <br/>
-                            <img src={require('../images/Title.png')} alt='title' style={phoneTitle} />
-                            <p style={{color: '#ffffff', fontSize: '1.2rem'}}>Participate in getlinked tech Hackathon 2023 stand a chance to win a big price</p>
-                            <Button name='Register' />
-                            <h2>00<small>H</small> 00<small>M</small> 00<small>S</small></h2>
-                        </div>
-                        <div style={{position: 'relative'}}>
-                            <img src={require('../images/man-wearing-smart-glasses-touching-virtual-screen.png')} alt='man' style={phoneImage1} />
-                            <img src={require('../images/Image.png')} alt='tech' style={phoneImage2} />
-                        </div>
+
+                <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: '100%',
+                            padding: '0 50px'
+                }}>
+                    <div>
+                        <img
+                         src={require('../images/star.png')}
+                         alt='star'
+                         style={{
+                            height: '20px',
+                            width: '20px'
+                         }} /> <br/>
+
+                        <img
+                         src={require('../images/Title.png')}
+                         alt='title'
+                         style={{
+                            height: '100px',
+                            width: '250px'
+                         }} />
+
+                        <p style={{color: '#ffffff', fontSize: '1.2rem'}}>Participate in getlinked tech Hackathon 2023 stand a chance to win a big price</p>
+                        <Button name='Register' />
+                        <h2>00<small style={{fontSize: '0.8rem'}}>H</small> 00<small style={{fontSize: '0.8rem'}}>M</small> 00<small style={{fontSize: '0.8rem'}}>S</small></h2>
+                    </div>
+
+                    <div style={{position: 'relative'}}>
+                        <img
+                         src={require('../images/man-wearing-smart-glasses-touching-virtual-screen.png')}
+                         alt='man'
+                         style={{
+                            height: '290px',
+                            width: '80%',
+                         }} />
+                        <img
+                         src={require('../images/Image.png')}
+                         alt='tech'
+                         style={{
+                                    height: '241px',
+                                    width: '267px',
+                                    position: 'absolute',
+                                    top: '20px',
+                                    right: '100px'
+                        }} />
                     </div>
 
                 </div>
+
+              </div>
             </Phone>
         </>
     )

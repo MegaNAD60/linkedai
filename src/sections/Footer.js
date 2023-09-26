@@ -1,7 +1,11 @@
-import { FaCheckCircle } from "react-icons/fa";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaTwitterSquare } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
+import {
+    FaTwitterSquare,
+    FaLinkedinIn,
+    FaInstagram,
+    FaFacebook,
+    FaPhone,
+    FaLocationArrow
+} from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 
 
@@ -48,25 +52,20 @@ function Footer(){
                     </div>
 
                     <div style={{marginLeft: '50px'}}>
-                        <h3>Useful Links</h3>
-                        <ul>
-                            <li><FaCheckCircle /> Overview</li>
-                            <li><FaCheckCircle /> Timeline</li>
-                            <li><FaCheckCircle /> FAQs</li>
-                            <li><FaCheckCircle /> Register</li>
-                        </ul>
-                        <p style={{color: '#d434fe'}}>Follow us:</p><FaFacebookSquare /> <FaTwitterSquare /> <FaLinkedinIn />
-                    </div>
-
-                    <div>
-                        <h3>Contact Us</h3>
+                        <h3 style={{color: '#d434fe'}}>Useful Links</h3>
                         <ul>
                             <li>Overview</li>
                             <li>Timeline</li>
                             <li>FAQs</li>
                             <li>Register</li>
                         </ul>
-                        <p style={{color: '#d434fe'}}>Follow us</p>
+                        <span style={{display: 'flex', alignItems: 'baseline'}}><p style={{color: '#d434fe'}}>Follow us:</p><FaInstagram style={{width: '25px', height: '25px', marginLeft: '10px'}} /> <FaFacebook style={{width: '25px', height: '25px', marginLeft: '10px'}} /> <FaTwitterSquare style={{width: '25px', height: '25px', marginLeft: '10px'}} /> <FaLinkedinIn style={{width: '25px', height: '25px', marginLeft: '10px'}} /></span>
+                    </div>
+
+                    <div>
+                        <h3 style={{color: '#d434fe'}}>Contact Us</h3>
+                        <span style={{display: 'flex', alignItems: 'baseline'}}><FaPhone /> <p style={{marginLeft: '20px'}}>+234 6707653444</p></span>
+                        <span style={{display: 'flex', alignItems: 'baseline'}}><FaLocationArrow /> <p style={{marginLeft: '20px'}}>27, Alara Street<br />Yaba 100012<br />Lagos State</p></span>
                     </div>
                 </div>
 
@@ -87,24 +86,19 @@ function Footer(){
                         <p>Terms of Use <span style={{color: '#d434fe'}}>|</span> Privacy Policy</p>
                     </div>
                     <div>
-                        <h3>Useful Links</h3>
-                        <ul>
-                            <li><FaCheckCircle /> Overview</li>
-                            <li><FaCheckCircle /> Timeline</li>
-                            <li><FaCheckCircle /> FAQs</li>
-                            <li><FaCheckCircle /> Register</li>
-                        </ul>
-                        <p style={{color: '#d434fe'}}>Follow us:</p><FaFacebookSquare /> <FaTwitterSquare /> <FaLinkedinIn />
-                    </div>
-                    <div>
-                        <h3>Contact Us</h3>
+                    <h3 style={{color: '#d434fe'}}>Useful Links</h3>
                         <ul>
                             <li>Overview</li>
                             <li>Timeline</li>
                             <li>FAQs</li>
                             <li>Register</li>
                         </ul>
-                        <p style={{color: '#d434fe'}}>Follow us</p>
+                        <span style={{display: 'flex', alignItems: 'baseline'}}><p style={{color: '#d434fe'}}>Follow us:</p><FaInstagram style={{width: '20px', height: '20px', marginLeft: '10px'}} /> <FaFacebook style={{width: '20px', height: '20px', marginLeft: '10px'}} /> <FaTwitterSquare style={{width: '20px', height: '20px', marginLeft: '10px'}} /> <FaLinkedinIn style={{width: '20px', height: '20px', marginLeft: '10px'}} /></span>
+                    </div>
+                    <div>
+                        <h3 style={{color: '#d434fe'}}>Contact Us</h3>
+                        <span style={{display: 'flex', alignItems: 'baseline'}}><FaPhone /> <p style={{marginLeft: '20px'}}>+234 6707653444</p></span>
+                        <span style={{display: 'flex', alignItems: 'baseline'}}><FaLocationArrow /> <p style={{marginLeft: '20px'}}>27, Alara Street<br />Yaba 100012<br />Lagos State</p></span>
                     </div>
                 </div>
                 <center>

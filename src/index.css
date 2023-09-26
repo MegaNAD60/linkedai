@@ -7,10 +7,6 @@ body {
 }
 
 
-hr{
-  border: 0.5px solid #302f2f;
-}
-
 p{
   line-height: 33px;
   font-size: 1.1rem;
@@ -27,14 +23,7 @@ a{
 }
 
 /* BUTTON STYLING */
-button{
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: 3px;
-  border: none, 1px;
-  color: #ffffff;
-  background-image: linear-gradient(to right, #d434ef, #903aff);
-}
+
 #nav-btn{
   padding: 10px 20px;
   font-size: 1rem;
@@ -79,6 +68,7 @@ select{
 /* NAV STYLING */
 .navbar{
   display: flex;
+  padding: 0 120px;
   align-items: center;;
   justify-content: space-between;
 }
@@ -190,7 +180,8 @@ label{
 
 .flexTemplate{
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: baseline;
 }
 
 .timeline{
@@ -200,27 +191,31 @@ label{
   align-items: baseline;
 }
 
-.timeline h3{
+.flexTemplate h3{
   color: #d434ef;
+}
+
+.lines{
+  position: relative;
 }
 
 .line{
   content: "";
   width: 20px;
   height: 20px;
-  background: #1f5297;
-  border: 1px solid  #d434ef;
+  background-image: linear-gradient(to right, #d434ef, #903aff);
   border-radius: 50%;
   text-align: center;
+  margin-top: 100px;
 }
 
 .line::before{
   content: "";
-  width: 2px;
-  height: 40px;
-  background: #1f5297;
+  width: 3px;
+  height: 80px;
+  background: #d434fe;
   position: absolute;
-  top: -15px;
+  top: -90px;
   margin-left: 4px;
 }
 
@@ -234,18 +229,29 @@ label{
   }
 
   /* NAVBAR STYLES FOR MOBILE VIEW */
-  .navbar .nav-links{
-    display: none;
+
+  .navbar{
+    padding: 10px 50px;
   }
 
+/*  .navbar .nav-links{
+    display: none;
+  }*/
+
   .navbar .links{
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
+    width: 70%;
     height: 100vh;
-    margin-top: 30px;
+    right: 3000px;
+    margin-top: 40px;
     z-index: 1;
-    background-color: #000000;
+    background-color: #150e28;;
+}
+
+.navbar .links.active{
+  right: 0;
 }
 
   .navbar .nav-icons{
@@ -254,6 +260,14 @@ label{
 
   .navbar .nav-btn{
     margin: 0;
+  }
+
+  .navbar .nav-links ul li{
+    margin-top: 20px;
+  }
+
+  .navbar .nav-links ul li a{
+    cursor: pointer;
   }
 
   /* MOBILE VIEW STYLES FOR HEADER */
@@ -272,6 +286,29 @@ label{
   .rules{
     display: grid;
     grid-template-columns: 100%;
+  }
+
+  .activities{
+    margin-left: 20px;
+  }
+
+  .line{
+    content: "";
+    width: 50px;
+    height: 20px;
+    background-image: linear-gradient(to right, #d434ef, #903aff);
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 120px;
+  }
+
+  .line::before{
+    content: "";
+    width: 3px;
+    height: 100px;
+    background: #d434fe;
+    position: absolute;
+    top: 20px;
   }
 
 }

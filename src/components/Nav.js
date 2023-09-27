@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom"
+import Button from "./Button";
 
 
 function Nav(){
@@ -24,14 +25,14 @@ function Nav(){
     return(
         <>
             <nav className='navbar'>
-                <div className='nav-logo'>get<span className='logo-span'>linked</span></div>
+                <div className='nav-logo'><Link to='/'>get<span className='logo-span'>linked</span></Link></div>
                 <div className='nav-links'>
                     <ul className={`links ${toggleNav && 'active'}`}>
                         <li><a href="index.js">Timeline</a></li>
                         <li><a href="index.js">Overview</a></li>
                         <li><a href="index.js">FAQs</a></li>
-                        <li><Link to='contact'>Contact</Link></li>
-                        <li style={{marginLeft: '100px'}}><a href="register" type="button" id="nav-btn">Register</a></li>
+                        <li><Link to='/contact'>Contact</Link></li>
+                        <Link to="/register"><Button name='Register' id='nav-btn' /></Link>
                     </ul>
                 </div>
                 <div className="nav-icons">

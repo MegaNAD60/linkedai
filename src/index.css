@@ -25,29 +25,11 @@ a{
 /* BUTTON STYLING */
 
 #nav-btn{
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: 3px;
-  border: none, 1px;
-  color: #ffffff;
-  background-image: linear-gradient(to right, #d434ef, #903aff);
+  margin-left: 100px;
 }
 
 /* Form STYLING */
-input{
-  width: 90%;
-  padding: 15px;
-  border: 1px solid #ffffff;
-  background-color: #903aff1a;
-}
 
-textarea{
-  width: 90%;
-  height: 80px;
-  padding: 15px;
-  border: 1px solid #ffffff;
-  background-color: #903aff1a;
-}
 
 select{
   width: 100%;
@@ -139,12 +121,6 @@ select{
 }
 
 /* REGISTER STYLING */
-.register{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 50px;
-}
-
 label{
   margin-top: 20px;
 }
@@ -166,17 +142,6 @@ label{
   color: #d434ef;
 }
 
-/*.ptag::before{
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid #1f5297;
-}*/
 
 .flexTemplate{
   display: flex;
@@ -270,27 +235,7 @@ label{
     cursor: pointer;
   }
 
-  /* MOBILE VIEW STYLES FOR HEADER */
-  .hearder-details{
-    display: grid;
-    grid-template-columns: 100%;
-  }
 
-  /* MOBILE VIEW STYLES FOR HEADER */
-  .big-idea{
-    display: grid;
-    grid-template-columns: 100%;
-  }
-
-
-  .rules{
-    display: grid;
-    grid-template-columns: 100%;
-  }
-
-  .activities{
-    margin-left: 20px;
-  }
 
   .line{
     content: "";

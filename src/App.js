@@ -3,6 +3,7 @@ import Homepage from './pages/Homepage';
 import Register from './pages/Register';
 import Contact from './pages/Contact'
 import Nav from './components/Nav';
+
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <div className='container'>
         <Nav />
       </div><hr/>
+
       <Routes>
 
         <Route path="/" element={<Homepage />} />

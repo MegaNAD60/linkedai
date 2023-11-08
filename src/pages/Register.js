@@ -2,28 +2,39 @@ import Button from '../components/Button';
 import Input from '../components/Input';
 import { useState } from 'react';
 import { Desktop, Phone } from '../components/MediaQueries';
+import * as Yup from 'yup';
+ import { useFormik } from 'formik'
 
-const Overlay = ({isOpen, children}) => {
+const Overlay = (props) => {
     return(
         <>
-            {
-                isOpen ? (
-                    <div>
-                        <div className='overlay_background'>
-                            <div className='over_container'>
-                                {children}
-                            </div>
-                        </div>
+            <div>
+                <div className='overlay_background'>
+                    <div className='over_container'>
+                        <p>Modals tech</p>
                     </div>
-                ) : null
-            }
+                </div>
+            </div>
         </>
     )
 }
 
 function Register() {
 
+    const formik = ({
+        initialValues: {
+            name: '',
+            phone: '',
+            email: '',
+            project_topic: ''
+        },
+        onSubmit: function(values){
+            alert(`You are registered!`)
+        }
+    })
+
     const [showModal, setShowModal] = useState(false);
+
 
 
 
@@ -57,10 +68,17 @@ function Register() {
                         <h2 style={{color: '#d434fe'}}>Register</h2>
                         <p>Be part of the movement...</p>
                         <h2>CREATE YOUR ACCOUNT</h2>
-                        <form>
+                        <form onSubmit={formik.handleSubmit}>
                             <div className='grid-container'>
                                 <label htmlFor='name'>Teams Name
-                                    <Input name='name' id='name' placeholder='Enter the name of your group' />
+                                    <Input
+                                     name='name'
+                                     id='name'
+                                     placeholder='Enter the name of your group'
+                                     onChange={formik.handleChange}
+                                     value={formik.values.name}
+                                     helperText={formik.errors.name ? formik.errors.name : ""}
+                                    />
                                 </label>
                                 <label htmlFor='phone'>Phone
                                     <Input name='phone' id='phone' placeholder='Enter your phone number' />
@@ -86,7 +104,12 @@ function Register() {
                                     </select>
                                 </label>
                             </div>
-                            <p style={{color: '#d434fe'}}><i>Please review your registration details before submitting</i></p>
+                            <p
+                             style={{
+                                color: '#d434fe'
+                                }}>
+                                    <i>Please review your registration details before submitting</i>
+                            </p>
                             <div style={{display: 'flex'}}><Input type='checkbox' /><span>I agreed with the event terms and condition and privacy policy</span></div><br/>
                             <Button onClick={() => setShowModal(!showModal)} name='Register Now' style={{width: '100%'}} />
                         </form>

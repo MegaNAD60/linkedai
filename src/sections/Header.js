@@ -1,21 +1,17 @@
 import Button from '../components/Button';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 import {Desktop, Phone} from '../components/MediaQueries';
+import { useEffect } from 'react';
 
 function Header(){
 
-   // DESKTOP CSS STYLE
-   const header = {
-    marginTop: '50px',
-    backgroundImage: 'radial-gradient(closest-side at 15% 33%, #903aff4d,  #150e28)',
-   }
-   const columnTemplate ={
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        justifyContent: 'space-between',
-        marginTop: '100px',
-        padding: '0 120px'
-   }
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
 
+   // DESKTOP CSS STYLE
     const star = {
         height: '3px',
         width: '3px'
@@ -39,40 +35,46 @@ function Header(){
         right: '100px'
     }
 
-    const innovation = {
-        position: 'relative',
-        float: 'right',
-        top: '-100px',
-        right: '300px'
-    }
-
-    const h3 = {
-        color: '#ffffff',
-        fontSize: '1.3rem',
-
-    }
-
-    const line = {
-        position: 'aboslute',
-        marginTop: '-10px',
-        width: '200px',
-        height: '100px',
-        marginLeft: '200px',
-        border: 'solid 5px #d434ef',
-        borderColor: '#d434ef transparent transparent transparent',
-        borderRadius: '80%/100px 100px 0 0',
-    }
 
     return(
         <>
         <Desktop>
-            <div style={header}>
-                <div style={innovation}>
-                    <h3 style={h3}><i>Igniting a Revolution in<span className='hr'> HR innovation</span></i></h3>
-                    <div style={line}></div>
+            <div style={{
+                marginTop: '50px',
+                backgroundImage: 'radial-gradient(closest-side at 15% 33%, #903aff4d,  #150e28)',
+            }}>
+                <div style={{
+                        position: 'absolute',
+                        top: '100px',
+                        right: '300px'
+                    }}>
+                    <h3 style={{
+                            position: 'relative',
+                            color: '#ffffff',
+                            fontSize: '1.3rem',
+                        }}>
+                        <i>Igniting a Revolution in HR innovation</i>
+                        <div style={{
+                                position: 'absolute',
+                                marginTop: '5px',
+                                width: '200px',
+                                height: '100px',
+                                marginLeft: '200px',
+                                border: 'solid 5px #d434ef',
+                                borderColor: '#d434ef transparent transparent transparent',
+                                borderRadius: '80%/50px 50px 0 0',
+                            }}>
+                        </div>
+                    </h3>
                 </div>
-                <div style={columnTemplate}>
-                    <div>
+                <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                        justifyContent: 'space-between',
+                        marginTop: '100px',
+                        padding: '0 120px'
+                }}>
+                    <div data-aos="fade-up">
                         <img src={require('../images/star.png')} alt='star' style={{star}} /> <br/>
                         <img src={require('../images/Title.png')} alt='title' style={title} />
                         <p style={{color: '#ffffff', fontSize: '1.2rem'}}>Participate in getlinked tech Hackathon 2023 stand a chance to win a big price</p>
@@ -94,31 +96,36 @@ function Header(){
                 marginTop: '10px',
                 backgroundImage: 'radial-gradient(closest-side at 40% 20%, #903aff4d,  #150e28)',
                }}>
-                <div style={{position: 'relative'}}>
+                <div style={{
+                        position: 'absolute',
+                        left: '20px'
+                    }}>
                     <h3 style={{
-                                position: 'absolute',
-                                right: '50px',
-                                top: '-40px',
+                                position: 'relative',
+                                marginTop: '10px',
                                 color: '#ffffff',
                                 fontSize: '1rem',
-                    }}>Igniting a Revolution in HR innovation</h3>
-
+                    }}>
+                    Igniting a Revolution in HR innovation
                     <div style={{
-                                position: 'aboslute',
-                                marginTop: '30px',
-                                marginLeft: '120px',
-                                width: '150px',
-                                height: '60px',
-                                border: 'solid 5px #d434ef',
-                                borderColor: '#d434ef transparent transparent transparent',
-                                borderRadius: '80%/100px 100px 0 0',
-                    }}></div>
+                            position: 'absolute',
+                            marginTop: '5px',
+                            width: '150px',
+                            height: '70px',
+                            marginLeft: '150px',
+                            border: 'solid 2px #d434ef',
+                            borderColor: '#d434ef transparent transparent transparent',
+                            borderRadius: '80%/50px 50px 0 0',
+                        }}>
+                    </div>
+                </h3>
+
                 </div>
 
                 <div style={{
                             display: 'grid',
                             gridTemplateColumns: '100%',
-                            padding: '0 50px'
+                            padding: '0 50px',
                 }}>
                     <div>
                         <img
@@ -134,7 +141,8 @@ function Header(){
                          alt='title'
                          style={{
                             height: '100px',
-                            width: '250px'
+                            width: '250px',
+                            margin: '50px 0 0 0'
                          }} />
 
                         <p style={{color: '#ffffff', fontSize: '1.2rem'}}>Participate in getlinked tech Hackathon 2023 stand a chance to win a big price</p>

@@ -1,4 +1,5 @@
 import { FaPlus } from 'react-icons/fa';
+import FaqItems from '../components/FaqItems';
 import { Desktop, Phone } from '../components/MediaQueries';
 
 function Faq(){
@@ -32,32 +33,7 @@ function Faq(){
             <Desktop>
                 <div style={faq}>
                     <div>
-                        <h2>Frequently Ask<br/><span style={{color: '#d434fe'}}>Question</span></h2>
-                        <p>We got answers to the question that you might want to ask about getlinked Hackathon 1.0</p>
-
-                        <div style={{ borderBottom: '1px solid #d434fe'}}>
-                            <p>Can I work on a project I started before the hackathon?<span style={{color: '#d434fe', float: 'right'}}><FaPlus /></span></p>
-                        </div>
-
-                        <div style={{ borderBottom: '1px solid #d434fe'}}>
-                            <p>What happens if I need help during the hackathon?<span style={{color: '#d434fe', float: 'right'}}><FaPlus /></span></p>
-                        </div>
-
-                        <div style={{ borderBottom: '1px solid #d434fe'}}>
-                            <p>What happens if I don't have an idea for a project?<span style={{color: '#d434fe', float: 'right'}}><FaPlus /></span></p>
-                        </div>
-
-                        <div style={{ borderBottom: '1px solid #d434fe'}}>
-                            <p>Can I join a team or do I have to come with one?<span style={{color: '#d434fe', float: 'right'}}><FaPlus /></span></p>
-                        </div>
-
-                        <div style={{ borderBottom: '1px solid #d434fe'}}>
-                            <p>What happens after the hackathon ends?<span style={{color: '#d434fe', float: 'right'}}><FaPlus /></span></p>
-                        </div>
-
-                        <div style={{ borderBottom: '1px solid #d434fe'}}>
-                            <p>Can I join a team or do I have to come with one?<span style={{color: '#d434fe', float: 'right'}}><FaPlus /></span></p>
-                        </div>
+                        <FaqItems />
                     </div>
                     <img src={require('../images/cwok_casual_21.png')} alt='faq' style={image} />
                 </div>

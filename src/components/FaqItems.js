@@ -38,14 +38,14 @@ function FaqItems(){
     const ToggleAnswer = ({id, question, answer}) => {
         const [expanded, setExpanded] = useState(false);
         return(
-            <div key={id}>
-                <div onClick={() => setExpanded(!expanded)}>
-                    <p>
-                        {question}
-                        <span style={{color: '#d434fe', float: 'right'}}><FaPlus /></span>
-                    </p>
+            <div className="border-b border-[#d434fe]" key={id}>
+                <div className="py-6" onClick={() => setExpanded(!expanded)}>
+                    <div className="flex justify-between">
+                        <p>{question}</p>
+                        <span className="text-[#d434fe]"><FaPlus /></span>
+                    </div>
                 </div>
-                {expanded && <p>{answer}</p>}<hr style={{ borderBottom: '1px solid #d434fe'}} />
+                {expanded && <p>{answer}</p>}
             </div>
         )
     }

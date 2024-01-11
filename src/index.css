@@ -1,13 +1,13 @@
-body {
-  margin: 0px;
-  color: #ffffff;
-  font-family: "montserrat", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #150e28;
+  color: white;
 }
 
-
-p{
+/*p{
   line-height: 33px;
   font-size: 1.1rem;
 }
@@ -24,14 +24,14 @@ a{
 
 /* BUTTON STYLING */
 
-#nav-btn{
+/*#nav-btn{
   margin-left: 100px;
 }
 
 /* Form STYLING */
 
 
-select{
+/*select{
   width: 100%;
   padding: 15px;
   border: 1px solid #ffffff;
@@ -47,7 +47,7 @@ select{
 }
 
 
-/* NAV STYLING */
+/* NAV STYLING
 .navbar{
   display: flex;
   padding: 0 120px;
@@ -115,13 +115,13 @@ select{
 
 
 /* FOOTER STYLING */
-.footer ul li{
+/*.footer ul li{
   list-style: none;
   margin-left: -40px;
 }
 
 /* REGISTER STYLING */
-label{
+/*label{
   margin-top: 20px;
 }
 
@@ -132,7 +132,7 @@ label{
 }
 
 /* CONTACT STYLING */
-.contact{
+/*.contact{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 50px;
@@ -186,7 +186,7 @@ label{
 
 
 /* MOBILE VIEW */
-@media screen and (max-width:800px){
+/*@media screen and (max-width:800px){
 
   p{
     line-height: 33px;
@@ -195,7 +195,7 @@ label{
 
   /* NAVBAR STYLES FOR MOBILE VIEW */
 
-  .navbar{
+/*  .navbar{
     padding: 10px 50px;
   }
 
@@ -203,7 +203,7 @@ label{
     display: none;
   }*/
 
-  .navbar .links{
+/*  .navbar .links{
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -256,4 +256,4 @@ label{
     top: 20px;
   }
 
-}
+}*/

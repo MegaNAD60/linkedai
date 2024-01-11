@@ -1,30 +1,104 @@
-import { Desktop, Phone } from "../components/MediaQueries"
 
 function Timeline(){
 
-    // DESKTOP CSS STYLE
-    const columnTemplate = {
-        padding: '0 220px',
-        fontSize: '1.1rem',
-    }
-
-    // PHONE CSS STYLE
-    const phoneColumnTemplate = {
-        padding: '0 20px',
-    }
-
     return(
-        <>
-            <Desktop>
-                <div style={columnTemplate}>
-                    <div>
-                        <center>
-                            <div>
-                                <h2>Timeline</h2>
-                                <p>Here is the breakdown of the time we anticipate<br /> using for the upcoming event.</p>
-                            </div>
-                        </center>
+        <div className="">
+            <div className="max-w-[1240px] mx-auto px-6 py-16">
+                <div className="w-full text-center mt-4">
+
+                    <h2 className="font-bold text-2xl">Timeline</h2>
+                    <p className="py-4">Here is the breakdown of the time we anticipate using for the upcoming event.</p>
+                </div>
+
+                <div className="md:grid md:grid-cols-3 mt-4">
+
+                    <div className="text-right">
+                        <h3 className="text-[#d434fe] font-medium">Hackathon Announcement</h3>
+                        <p>The getlinked tech Hackathon is normally announced to the public and teams begin to get ready to register</p>
                     </div>
+
+                    <div className="text-center mx-auto ">
+                        <div className="w-1 h-[60px] bg-[#d434fe] mx-auto"></div>
+                        <div className="w-8 h-8 rounded-full bg-[#d434fe] mt-1">
+                            <p className="py-1">1</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p className="text-[#d434fe]">November 18, 2023</p>
+                    </div>
+
+                </div>
+
+
+                <div className="md:grid md:grid-cols-3 mt-4">
+
+                    <div className="text-right">
+                        <p className="text-[#d434fe]">November 18, 2023</p>
+                    </div>
+
+                    <div className="text-center mx-auto ">
+                        <div className="w-1 h-[60px] bg-[#d434fe] mx-auto"></div>
+                        <div className="w-8 h-8 rounded-full bg-[#d434fe] mt-1">
+                            <p className="py-1">2</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-[#d434fe] font-medium">Hackathon Announcement</h3>
+                        <p>The getlinked tech Hackathon is normally announced to the public and teams begin to get ready to register</p>
+                    </div>
+
+                </div>
+
+                <div className="md:grid md:grid-cols-3 mt-4">
+
+                    <div className="text-right">
+                        <h3 className="text-[#d434fe] font-medium">Hackathon Announcement</h3>
+                        <p>The getlinked tech Hackathon is normally announced to the public and teams begin to get ready to register</p>
+                    </div>
+
+                    <div className="text-center mx-auto ">
+                        <div className="w-1 h-[60px] bg-[#d434fe] mx-auto"></div>
+                        <div className="w-8 h-8 rounded-full bg-[#d434fe] mt-1">
+                            <p className="py-1">3</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p className="text-[#d434fe]">November 18, 2023</p>
+                    </div>
+
+                </div>
+
+
+                <div className="md:grid md:grid-cols-3 mt-4">
+
+                    <div className="text-right">
+                        <p className="text-[#d434fe]">November 18, 2023</p>
+                    </div>
+
+                    <div className="text-center mx-auto ">
+                        <div className="w-1 h-[60px] bg-[#d434fe] mx-auto"></div>
+                        <div className="w-8 h-8 rounded-full bg-[#d434fe] mt-1">
+                            <p className="py-1">4</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-[#d434fe] font-medium">Hackathon Announcement</h3>
+                        <p>The getlinked tech Hackathon is normally announced to the public and teams begin to get ready to register</p>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+{/*                <div style={columnTemplate}>
 
                     <div className="flexTemplate">
 
@@ -101,7 +175,7 @@ function Timeline(){
 
                 </div>
 
-            </Desktop>
+            </div>
 
             <Phone>
                 <div style={phoneColumnTemplate}>
@@ -140,8 +214,9 @@ function Timeline(){
                         </div>
                     </div>
                 </div>
-            </Phone>
-        </>
+    </Phone>*/}
+        </div>
+        </div>
     )
 }
 

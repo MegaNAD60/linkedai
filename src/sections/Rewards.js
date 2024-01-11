@@ -1,67 +1,34 @@
-import { Desktop, Phone } from '../components/MediaQueries'
+import rewards from '../images/rewards1.png'
+import rewards2 from '../images/Rewards.png'
+import star from '../images/star_pu.png'
+import star2 from '../images/star.png'
 
 function Rewards(){
 
-   // DESKTOP CSS STYLE
-
-    const columnTemplate= {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        padding: '0 120px'
-    }
-
-    const image1 = {
-        height: '482px',
-        width: '548px',
-    }
-
-    const image2 = {
-        height: '494px',
-        width: '692px',
-    }
-
-    // PHONE CSS STYLE
-
-    const phoneColumnTemplate = {
-        display: 'grid',
-        gridTemplateColumns: '100%',
-        padding: '0 50px'
-    }
-
-    const phoneImage1 = {
-        height: '400px',
-        width: '100%',
-    }
-
-    const phoneImage2 = {
-        height: '300px',
-        width: '100%',
-    }
-
     return(
-        <>
-            <Desktop>
-                <div style={columnTemplate}>
-                    <img src={require('../images/rewards1.png')} alt='rewards1' style={image1} />
-                    <div>
-                        <h2>Prizes and<br/><span style={{color: '#d434fe'}}>Rewards</span></h2>
-                        <p>Highlight of the prizes or rewards for winners and for participants.</p>
-                        <img src={require('../images/Rewards.png')} alt='rewards2' style={image2} />
-                </div>
-                </div>
-            </Desktop>
+        <div>
 
-            <Phone>
-                <div style={phoneColumnTemplate}>
-                    <img src={require('../images/rewards1.png')} alt='rewards1' style={phoneImage1} />
+            <div className='max-w-[1240px] mx-auto px-6 py-16'>
+
+                <div className='mt-6 md:ml-[50%] text-center md:text-left'>
+                    <h2 className='font-medium text-2xl'>Prizes and<br/><span className='text-[#d434fe]'>Rewards</span></h2>
+                    <p className='py-4'>Highlight of the prizes or rewards for winners and for participants.</p>
+                </div>
+
+                <div className='md:grid md:grid-cols-2 gap-10'>
                     <div>
-                        <h2>Prizes and<br/><span style={{color: '#d434fe'}}>Rewards</span></h2>
-                        <p>Highlight of the prizes or rewards for winners and for participants.</p>
-                        <img src={require('../images/Rewards.png')} alt='rewards2' style={phoneImage2} />
+                        <img src={star} alt='/' className='mt-[-80px] w-[15px]' />
+                        <img src={rewards} alt='rewards1' className='mt-20' />
+                    </div>
+                    <div className='mt-2 md:mt-0'>
+                        <img src={star2} alt='/' className='w-[15px]' />
+                        <img src={rewards2} alt='rewards2' className='mt-2' />
+                    </div>
                 </div>
-                </div>
-            </Phone>
-        </>
+
+            </div>
+
+        </div>
     )
 }
 

@@ -35,22 +35,10 @@ function Homepage(){
     window.addEventListener('scroll', whenScroll)
 
     return(
-        <>
-            <button
+        <div>
+            <button className={showBtn ? "fixed right-4 bottom-4 lg:right-40 rounded-md font-medium p-3 bg-gradient-to-r from-[#d434ef] to-[#903aff]" : 'hidden'}
              onClick={scrollTop}
-             onScroll={whenScroll}
-             style={{
-                display: showBtn ? 'inline' : 'none',
-                position: 'fixed',
-                right: '30px',
-                bottom: '30px',
-                padding: '10px',
-                borderRadius: '5px',
-                color: '#ffffff',
-                fontSize: '1.2rem',
-                border: 'none',
-                backgroundImage: 'linear-gradient(to right, #d434ef, #903aff)'
-            }}><FaChevronUp /></button>
+             onScroll={whenScroll}><FaChevronUp /></button>
             <section>
                 <Header />
             </section><hr />
@@ -78,10 +66,10 @@ function Homepage(){
             <section>
                 <PrivacyPolicy />
             </section><hr />
-            <section>
+           <section>
                 <Footer />
-            </section><hr />
-        </>
+            </section>
+        </div>
     )
 }
 

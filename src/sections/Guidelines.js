@@ -1,63 +1,26 @@
-import { Desktop, Phone } from '../components/MediaQueries'
+import rules from '../images/rules.png'
 
 function Guidelines(){
-    // DESKTOP VIEW
-    const columnTemplate = {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        padding: '0 120px'
-    }
-
-    const image = {
-        height: '564px',
-        width: '564px',
-    }
-
-    // PHONE VIEW
-    const phoneColumnTemplate = {
-        display: 'grid',
-        gridTemplateColumns: '100%',
-        padding: '0 50px'
-    }
-
-    const phoneImage = {
-        height: '300px',
-        width: '300px',
-    }
 
     return(
-        <>
-            <Desktop>
-                <div style={columnTemplate}>
-                    <div>
-                            <h2>Rules and <br/><span style={{color: '#d434fe'}}>Guidelines</span></h2>
-                            <p>Our tech hackathon is a melting point of visionaries, and its purpose is as clear
-                            as day: to shape the future. Whether you're a coding genius, a design maverick, or a
-                            concept wizard, you'll have the chance to transform your ideas into reality. Solving
-                            real-world problems, pushing the boundaries of technology, and creating solutions
-                            that can change the world, that's what we're all about.
-                        </p>
-                </div>
-                    <img src={require('../images/rules.png')} alt='guidelines' style={image} />
-                </div>
-            </Desktop>
+        <div>
+            <div className='max-w-[1240px] md:grid md:grid-cols-2 gap-10 mx-auto py-10 px-6'>
 
-            <Phone>
-                <div style={phoneColumnTemplate}>
-                        <div>
-                            <h2>Rules and <br/><span style={{color: '#d434fe'}}>Guidelines</span></h2>
-                            <p>
-                                Our tech hackathon is a melting point of visionaries, and its purpose is as clear
-                                as day: to shape the future. Whether you're a coding genius, a design maverick, or a
-                                concept wizard, you'll have the chance to transform your ideas into reality. Solving
-                                real-world problems, pushing the boundaries of technology, and creating solutions
-                                that can change the world, that's what we're all about.
-                            </p>
-                        </div>
-                    <img src={require('../images/rules.png')} alt='guidelines' style={phoneImage} />
+                <img src={rules} alt='guidelines' className='mt-10 md:mt-0 order-last' />
+
+                <div className='md:mt-10'>
+                    <h2 className='font-medium md:text-3xl sm:text-2xl text-xl'>Rules and <br/><span style={{color: '#d434fe'}}>Guidelines</span></h2>
+                    <p className='mt-4 lg:leading-10'>Our tech hackathon is a melting point of visionaries, and its purpose is as clear
+                    as day: to shape the future. Whether you're a coding genius, a design maverick, or a
+                    concept wizard, you'll have the chance to transform your ideas into reality. Solving
+                    real-world problems, pushing the boundaries of technology, and creating solutions
+                    that can change the world, that's what we're all about.
+                    </p>
                 </div>
-            </Phone>
-        </>
+
+            </div>
+        </div>
+
     )
 }
 

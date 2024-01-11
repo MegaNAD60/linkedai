@@ -1,53 +1,20 @@
-import { Desktop, Phone } from '../components/MediaQueries'
+import partners from '../images/partners.png'
+import star from '../images/star_pu.png'
 
 function Partners(){
 
-    // DESKTOP CSS STYLE
-    const columnTemplate = {
-        textAlign: 'center',
-        padding: '0 120px',
-    }
-
-    const image = {
-        height: '460px',
-        width: '1155px',
-    }
-
-    // PHONE CSS STYLE
-    const phoneColumnTemplate = {
-        textAlign: 'center',
-        padding: '0 50px'
-    }
-
-    const phoneImage = {
-        height: '250px',
-        width: '100%',
-    }
-
     return(
-        <>
-            <Desktop>
-                <div className='partners' style={columnTemplate}>
-                    <h2>Partners and Sponsors</h2>
-                    <p>
-                        Getlinked Hackathon 1.0 is honored to have the following<br/>
-                        major companies as its partners and sponsors
-                    </p>
-                    <img src={require('../images/partners.png')} alt='partners' style={image} />
-                </div>
-            </Desktop>
-
-            <Phone>
-                <div className='partners' style={phoneColumnTemplate}>
-                    <h2>Partners and Sponsors</h2>
-                    <p>
-                        Getlinked Hackathon 1.0 is honored to have the following<br/>
-                        major companies as its partners and sponsors
-                    </p>
-                    <img src={require('../images/partners.png')} alt='partners' style={phoneImage} />
-                </div>
-            </Phone>
-        </>
+        <div>
+            <div className='max-w-[1240px] mx-auto py-16 px-6 text-center'>
+                <h2 className='font-medium text-2xl'>Partners and Sponsors</h2>
+                <p className='py-4'>
+                    Getlinked Hackathon 1.0 is honored to have the following<br/>
+                    major companies as its partners and sponsors
+                </p>
+                <img src={star} alt='/' className='w-[15px] ml-10 md:ml-40' />
+                <img src={partners} alt='/' className='w-[1000px] mx-auto mt-4' />
+            </div>
+        </div>
     )
 }
 

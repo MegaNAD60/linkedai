@@ -1,27 +1,20 @@
 import Button from '../components/Button';
 import Input from '../components/Input';
+import image from '../images/3d-graphic.png'
 import { useState } from 'react';
-import { Desktop, Phone } from '../components/MediaQueries';
 import * as Yup from 'yup';
  import { useFormik } from 'formik'
+ import { Overlay } from '../components/Overlay';
 
-const Overlay = (props) => {
-    return(
-        <>
-            <div>
-                <div className='overlay_background'>
-                    <div className='over_container'>
-                        <p>Modals tech</p>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-}
+
+
+
 
 function Register() {
 
-    const formik = ({
+    const [overlayOpen, setOverlayOpen] = useState(false)
+
+/*    const formik = ({
         initialValues: {
             name: '',
             phone: '',
@@ -36,55 +29,46 @@ function Register() {
     const [showModal, setShowModal] = useState(false);
 
 
-
+*/
 
 
     return(
         <>
-            <Overlay
+            {/*<Overlay
                 isOpen={showModal}
                 onClose={() => setShowModal(!showModal)}
             >
                 <div>Modal body</div>
-            </Overlay>
-            <Desktop>
-                <div
-                 className='register'
-                 style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, 1fr)',
-                    padding: '50px'
-                 }}>
-                    <img
-                    src={require('../images/3d-graphic.png')}
-                    alt='partners'
-                    style={{
-                        width: '717px',
-                        height: '717px'}} />
+            </Overlay>*/}
+            <div>
+                <div className='max-w-[1240px] mx-auto px-6 py-16 md:grid md:grid-cols-3 lg:grid-cols-2 gap-5'>
 
-                    <div
-                     className='form-box'
-                     style={{}}>
-                        <h2 style={{color: '#d434fe'}}>Register</h2>
-                        <p>Be part of the movement...</p>
-                        <h2>CREATE YOUR ACCOUNT</h2>
-                        <form onSubmit={formik.handleSubmit}>
-                            <div className='grid-container'>
+                    <img src={image} alt='' className='md:mt-10 lg:mt-0' />
+
+                    <div className='md:col-span-2 lg:col-span-1 p-10 bg-[rgba(35,18,39,0.5)]'>
+                        <h2 className='text-[#d434fe] font-medium text-2xl'>Register</h2>
+                        <p className='py-4 mt-2'>Be part of the movement...</p>
+                        <h2 className='text-2xl'>CREATE YOUR ACCOUNT</h2>
+
+                        <form>
+
+                            <div className='md:grid md:grid-cols-2 gap-5'>
                                 <label htmlFor='name'>Teams Name
                                     <Input
                                      name='name'
                                      id='name'
                                      placeholder='Enter the name of your group'
-                                     onChange={formik.handleChange}
-                                     value={formik.values.name}
-                                     helperText={formik.errors.name ? formik.errors.name : ""}
+                                     onChange={{/*formik.handleChange*/}}
+                                     value={{/*formik.values.name*/}}
+                                     helperText={{/*formik.errors.name ? formik.errors.name : ""*/}}
                                     />
                                 </label>
                                 <label htmlFor='phone'>Phone
                                     <Input name='phone' id='phone' placeholder='Enter your phone number' />
                                 </label>
                             </div>
-                            <div className='grid-container'>
+
+                            <div className='md:grid md:grid-cols-2 gap-5'>
                                 <label htmlFor='email'>Email
                                     <Input name='email' id='email' placeholder='Enter your email address' />
                                 </label>
@@ -92,112 +76,38 @@ function Register() {
                                     <Input name='project-topic' id='project-topic' placeholder='What is your group project topic' />
                                 </label>
                             </div>
-                            <div className='grid-container'>
+
+                            <div className='md:grid md:grid-cols-2 gap-5'>
                                 <label htmlFor='category'>Category<br/>
-                                    <select name='category' id='category'>
+                                    <select className='w-full p-4 bg-transparent border border-white mt-6' name='category' id='category'>
                                         <option>Select your category</option>
                                     </select>
                                 </label>
                                 <label htmlFor='group'>Group Size<br/>
-                                    <select name='group' id='group'>
+                                    <select className='w-full p-4 bg-transparent border border-white mt-6' name='group' id='group'>
                                         <option>Select</option>
                                     </select>
                                 </label>
                             </div>
-                            <p
-                             style={{
-                                color: '#d434fe'
-                                }}>
-                                    <i>Please review your registration details before submitting</i>
+
+                            <p className='text-[#d434fe] py-4'>
+                                <i>Please review your registration details before submitting</i>
                             </p>
-                            <div style={{display: 'flex'}}><Input type='checkbox' /><span>I agreed with the event terms and condition and privacy policy</span></div><br/>
-                            <Button onClick={() => setShowModal(!showModal)} name='Register Now' style={{width: '100%'}} />
+                            <div className='flex gap-2'>
+                                <input type='checkbox' className='bg-transparent' />
+                                <span>I agreed with the event terms and condition and privacy policy</span>
+                            </div>
                         </form>
+                        <button onClick={() => setOverlayOpen(!overlayOpen)} className='w-full py-2 mt-4 text-white bg-gradient-to-r from-[#d434ef] to-[#903aff]'>
+                            Submit
+                        </button>
                     </div>
                 </div>
-            </Desktop>
+            </div>
 
-            <Phone>
-                <div
-                 className='register'
-                 style={{
-                    display: 'grid',
-                    gridTemplateColumns: '100%',
-                    padding: '20px'
-                 }}>
-                    <img
-                        src={require('../images/3d-graphic.png')}
-                        alt='partners'
-                        style={{
-                            width: '317px',
-                            height: '317px'}}
-                    />
-
-                    <div
-                     className='form-box'
-                     style={{
-                        padding: '15px',
-                     }}>
-                        <h2 style={{color: '#d434fe'}}>Register</h2>
-                        <p>Be part of the movement...</p>
-                        <h2>CREATE YOUR ACCOUNT</h2>
-                        <form>
-                            <div
-                             className='grid-container'
-                             style={{
-                                display: 'grid',
-                                gridTemplateColumns: '100%',
-                                gap: '20px',
-                             }}>
-                                <label htmlFor='name'>Teams Name
-                                    <Input name='name' id='name' placeholder='Enter the name of your group' />
-                                </label>
-                                <label htmlFor='phone'>Phone
-                                    <Input name='phone' id='phone' placeholder='Enter your phone number' />
-                                </label>
-                            </div>
-
-                            <div
-                             className='grid-container'
-                             style={{
-                                display: 'grid',
-                                gridTemplateColumns: '100%',
-                                gap: '20px',
-                             }}>
-                                <label htmlFor='email'>Email
-                                    <Input name='email' id='email' placeholder='Enter your email address' />
-                                </label>
-                                <label htmlFor='project-topic'>Project Topic
-                                    <Input name='project-topic' id='project-topic' placeholder='What is your group project topic' />
-                                </label>
-                            </div>
-
-                            <div
-                             className='grid-container'
-                             style={{
-                                display: 'grid',
-                                gridTemplateColumns: '100%',
-                                gap: '20px',
-                             }}>
-                                <label htmlFor='category'>Category<br/>
-                                    <select name='category' id='category'>
-                                        <option>Select your category</option>
-                                    </select>
-                                </label>
-                                <label htmlFor='group'>Group Size<br/>
-                                    <select name='group' id='group'>
-                                        <option>Select</option>
-                                    </select>
-                                </label>
-                            </div>
-
-                            <p style={{color: '#d434fe'}}><i>Please review your registration details before submitting</i></p>
-                            <div style={{display: 'flex'}}><Input type='checkbox' /><span>I agreed with the event terms and condition and privacy policy</span></div><br/>
-                            <Button name='Register Now' style={{width: '100%'}} />
-                        </form>
-                    </div>
-                </div>
-            </Phone>
+            <Overlay isOpen={overlayOpen} onClose={() => setOverlayOpen(!overlayOpen)}>
+                <div className='text-black'>Hello overlay</div>
+            </Overlay>
         </>
     )
 }

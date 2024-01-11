@@ -1,101 +1,67 @@
 import {
-    FaTwitterSquare,
+    FaTwitter,
     FaLinkedinIn,
     FaInstagram,
     FaFacebook,
     FaPhone,
     FaLocationArrow
 } from "react-icons/fa";
-import { Desktop, Phone } from "../components/MediaQueries";
+
 
 
 function Footer(){
 
-    // DESKTOP CSS STYLE
-    const columnTemplate = {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '50px',
-        padding: '50px 80px',
-    }
-
-    //PHONE CSS STYLE
-    const phoneColumnTemplate = {
-        display: 'grid',
-        gridTemplateColumns: '100%',
-        padding: '0 50px',
-    }
-
     return(
-        <>
-            <Desktop>
-                <div className="footer" style={columnTemplate}>
+        <div>
+            <div className="max-w-[1240px] mx-auto md:grid md:grid-cols-3 gap-10 py-10 px-6">
 
                     <div>
-                        <h2>get<span style={{color: '#d434fe'}}>linked</span></h2>
-                        <p>
+                        <h2 className="font-bold text-2xl">get<span className="text-[#d434fe]">linked</span></h2>
+                        <p className="py-2 text-sm">
                             Getlinked Tech Hackathon is a technology innovation program established
                             by a group of organizations with the aim of showcasing young and talented
                             individuals in the field of technology
                         </p>
-                        <p>Terms of Use <span style={{color: '#d434fe'}}>|</span> Privacy Policy</p>
+                        <p className="mt-10">Terms of Use <span className="text-[#d434fe]">|</span> Privacy Policy</p>
                     </div>
 
-                    <div style={{marginLeft: '50px'}}>
-                        <h3 style={{color: '#d434fe'}}>Useful Links</h3>
-                        <ul>
+                    <div>
+                        <h3 className="text-[#d434fe]">Useful Links</h3>
+                        <ul className="leading-10">
                             <li>Overview</li>
                             <li>Timeline</li>
                             <li>FAQs</li>
                             <li>Register</li>
                         </ul>
-                        <span style={{display: 'flex', alignItems: 'baseline'}}><p style={{color: '#d434fe'}}>Follow us:</p><FaInstagram style={{width: '25px', height: '25px', marginLeft: '10px'}} /> <FaFacebook style={{width: '25px', height: '25px', marginLeft: '10px'}} /> <FaTwitterSquare style={{width: '25px', height: '25px', marginLeft: '10px'}} /> <FaLinkedinIn style={{width: '25px', height: '25px', marginLeft: '10px'}} /></span>
+                        <span className="flex gap-3">
+                            <p className="text-[#d434fe]">Follow us:</p>
+                            <FaInstagram size={25} />
+                            <FaFacebook size={25} />
+                            <FaTwitter size={25} />
+                            <FaLinkedinIn size={25} />
+                        </span>
                     </div>
 
                     <div>
-                        <h3 style={{color: '#d434fe'}}>Contact Us</h3>
-                        <span style={{display: 'flex', alignItems: 'baseline'}}><FaPhone /> <p style={{marginLeft: '20px'}}>+234 6707653444</p></span>
-                        <span style={{display: 'flex', alignItems: 'baseline'}}><FaLocationArrow /> <p style={{marginLeft: '20px'}}>27, Alara Street<br />Yaba 100012<br />Lagos State</p></span>
+                        <h3 className="text-[#d434fe]">Contact Us</h3>
+                        <span className="flex gap-5 mt-5">
+                            <FaPhone />
+                            <p>+234 6707653444</p>
+                        </span>
+                        <span className="flex gap-5 mt-5">
+                            <FaLocationArrow />
+                            <p>27, Alara Street<br />Yaba 100012<br />Lagos State</p>
+                        </span>
                     </div>
-                </div>
 
-                <center>
-                    <p>All rights reserved. @copy getlinked Ltd.</p>
-                </center>
-            </Desktop>
+            </div>
 
-            <Phone>
-                <div className="footer" style={phoneColumnTemplate}>
-                    <div>
-                        <h2>get<span style={{color: '#d434fe'}}>linked</span></h2>
-                        <p>
-                            Getlinked Tech Hackathon is a technology innovation program established
-                            by a group of organizations with the aim of showcasing young and talented
-                            individuals in the field of technology
-                        </p>
-                        <p>Terms of Use <span style={{color: '#d434fe'}}>|</span> Privacy Policy</p>
-                    </div>
-                    <div>
-                    <h3 style={{color: '#d434fe'}}>Useful Links</h3>
-                        <ul>
-                            <li>Overview</li>
-                            <li>Timeline</li>
-                            <li>FAQs</li>
-                            <li>Register</li>
-                        </ul>
-                        <span style={{display: 'flex', alignItems: 'baseline'}}><p style={{color: '#d434fe'}}>Follow us:</p><FaInstagram style={{width: '20px', height: '20px', marginLeft: '10px'}} /> <FaFacebook style={{width: '20px', height: '20px', marginLeft: '10px'}} /> <FaTwitterSquare style={{width: '20px', height: '20px', marginLeft: '10px'}} /> <FaLinkedinIn style={{width: '20px', height: '20px', marginLeft: '10px'}} /></span>
-                    </div>
-                    <div>
-                        <h3 style={{color: '#d434fe'}}>Contact Us</h3>
-                        <span style={{display: 'flex', alignItems: 'baseline'}}><FaPhone /> <p style={{marginLeft: '20px'}}>+234 6707653444</p></span>
-                        <span style={{display: 'flex', alignItems: 'baseline'}}><FaLocationArrow /> <p style={{marginLeft: '20px'}}>27, Alara Street<br />Yaba 100012<br />Lagos State</p></span>
-                    </div>
-                </div>
-                <center>
-                    <p>All rights reserved. @copy getlinked Ltd.</p>
-                </center>
-            </Phone>
-        </>
+
+            <div className="text-center pb-5">
+                <p>All rights reserved. @copy getlinked Ltd.</p>
+            </div>
+
+        </div>
     )
 }
 

@@ -43,7 +43,7 @@ function Nav(){
                         <li className="py-2">Overview</li>
                         <li className="py-2">FAQs</li>
                         <li className="py-2"><Link to='/contact'>Contact</Link></li>
-                        <button className="py-2 px-4 font-medium bg-gradient-to-r from-[#d434ef] to-[#903aff]">Register</button>
+                        <Link to='/register'><button className="py-2 px-4 font-medium bg-gradient-to-r from-[#d434ef] to-[#903aff]">Register</button></Link>
                     </ul>
                 </div>
 

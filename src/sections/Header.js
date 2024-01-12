@@ -26,15 +26,10 @@ function Header(){
             <div className='max-w-[1240px] mx-auto px-6 py-20'>
                 <div className='md:ml-[70%]'>
                     <h3 className='relative right-0'>Igniting a Revolution in HR innovation
-                        <div style={{
-                                position: 'absolute',
-                                marginTop: '5px',
-                                width: '200px',
-                                height: '100px',
-                                left: '100px',
-                                border: 'solid 5px #d434ef',
-                                borderColor: '#d434ef transparent transparent transparent',
-                                borderRadius: '80%/50px 50px 0 0',
+                        <div className='absolute left-[100px] mt-[5px] w-[170px] h-[50px] border-t-4 border-[#d434ef] rounded-[70%/40px]' style={{
+                                //border: 'solid 5px #d434ef',
+                                //borderColor: '#d434ef transparent transparent transparent',
+                                //borderRadius: '80%/50px 50px 0 0',
                             }}></div>
                     </h3>
                 </div>

@@ -1,6 +1,7 @@
 import Button from '../components/Button';
 import Input from '../components/Input';
 import image from '../images/3d-graphic.png'
+import congratulations from '../images/congratulation.png'
 import { useState } from 'react';
 import * as Yup from 'yup';
  import { useFormik } from 'formik'
@@ -106,7 +107,14 @@ function Register() {
             </div>
 
             <Overlay isOpen={overlayOpen} onClose={() => setOverlayOpen(!overlayOpen)}>
-                <div className='text-black'>Hello overlay</div>
+                <div className='text-center'>
+                    <img src={congratulations} alt='/' className='mx-auto w-72' />
+                    <h2 className='font-medium text-2xl'>Congratulations</h2>
+                    <h2 className='font-medium text-2xl'>You have successfully Registered!</h2>
+                    <p className='py-1 text-sm'>Yes, it was easy and you did it!</p>
+                    <p className='py-1 text-sm'>check your mail box for the next step</p>
+                    <button className='w-full py-2 mt-4 text-white bg-gradient-to-r from-[#d434ef] to-[#903aff]'>Back</button>
+                </div>
             </Overlay>
         </>
     )
